@@ -23,8 +23,15 @@ void capturarEnteros(){
     cout<<"Promedio: "<<suma/5<<endl;
 }
 
+void mostrar(int n, char cadena[]){
+    for(int i=0;i<n;i++){
+        cout<<cadena<<endl;
+    }
+}
+
 int main(){
-    char op;
+    char op, cadena[20];
+    int n;
 
     do
     {
@@ -44,6 +51,12 @@ int main(){
             break;
 
         case '2':
+            cout<<"Escirbe una cadena de hasta 20 caracteres: ";
+            cin.getline(cadena,20);
+            cout<<endl<<"n: ";
+            cin>>n;
+            cout<<endl;
+            mostrar(n,cadena);
             break;
 
         case '3':
