@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Personaje.h"
 
 using namespace std;
 
@@ -38,6 +39,7 @@ int main(){
         cout<<"1- Capturar enteros"<<endl;
         cout<<"2- Mostrar cadena n veces"<<endl;
         cout<<"3- Agregar personaje"<<endl;
+        cout<<"4- Mostrar personajes"<<endl;
         cout<<"0- Salir"<<endl;
         cin>>op;
 
@@ -52,6 +54,7 @@ int main(){
 
         case '2':
             cout<<"Escirbe una cadena de hasta 20 caracteres: ";
+            fflush(stdin);
             cin.getline(cadena,20);
             cout<<endl<<"n: ";
             cin>>n;
@@ -60,6 +63,11 @@ int main(){
             break;
 
         case '3':
+            capturaPersonaje();
+            break;
+
+        case '4':
+            mostrarPersonajes();
             break;
 
         default:
